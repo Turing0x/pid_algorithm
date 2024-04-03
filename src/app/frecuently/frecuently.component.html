@@ -1,0 +1,17 @@
+<section class="frecuently" style="margin-top: 20px">
+  <div class="title">Algoritmos a Estudiar...</div>
+
+  <div class="boxes">
+    @for (algorithm of algorithm_list; track algorithm.name) {
+    <div
+      class="box"
+      [routerLink]="['/details']"
+      [queryParams]="{ algorithm: objectToString(algorithm) }"
+    >
+      <div class="clasification">{{ algorithm.clasification }}</div>
+      <div class="name">{{ algorithm.name }}</div>
+      <div class="description">{{ algorithm.description }}</div>
+    </div>
+    }
+  </div>
+</section>
