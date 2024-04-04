@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, type OnInit } from '@angular/core';
+import { AfterViewInit, Component, type OnInit } from '@angular/core';
 import { IAlgorithm } from '../../models/ia_algorithm';
 import { ActivatedRoute } from '@angular/router';
 
@@ -19,8 +19,8 @@ export class DetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute
-  ) {}
-
+  ) { }
+  
   ngOnInit(): void {
     this.route.queryParamMap.subscribe(
       params => {
