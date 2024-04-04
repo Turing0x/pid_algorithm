@@ -6,4 +6,5 @@ export interface IAlgorithm {
   concept: string;
   components: string[];
   process: string[];
+  code: string;
 }
