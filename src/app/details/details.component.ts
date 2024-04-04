@@ -15,6 +15,8 @@ import { ActivatedRoute } from '@angular/router';
   
 export class DetailsComponent implements OnInit {
 
+  algorithm!: IAlgorithm;
+
   constructor(
     private route: ActivatedRoute
   ) {}
@@ -22,9 +24,9 @@ export class DetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParamMap.subscribe(
       params => {
-        const algorithm = params.get('algorithm');
-        if (algorithm) {
-          console.log(JSON.parse(algorithm));
+        const data = params.get('algorithm');
+        if (data) {
+          this.algorithm = JSON.parse(data)
         }
       }
     )

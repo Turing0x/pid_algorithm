@@ -1,0 +1,56 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+a {
+  display: flex;
+  font-size: 18px;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  height: 20px;
+}
+
+p {
+  font-size: 20px;
+}
+
+a:hover {
+  border-bottom: 1px solid black;
+}
+
+.page_title {
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.clasification {
+  color: #16a34a;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 15px;
+  user-select: none;
+}
+
+.name {
+  color: #1d3b8f;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.component,
+.process {
+  display: flex;
+  font-size: 20px;
+  flex-direction: row;
+  color: #1e3aa8;
+  gap: 10px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}

@@ -1,1 +1,64 @@
-<p>details works!</p>,
+<main style="padding-top: 50px">
+  <header>
+    <a href="">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-arrow-left-short"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"
+        />
+      </svg>
+      Volver al inicio
+    </a>
+
+    <p class="page_title">Algoritmos de Inteligencia Artificial</p>
+  </header>
+
+  <article class="algorithm_data">
+    <div class="title" style="display: flex; flex-direction: column">
+      <span class="clasification">{{ algorithm.clasification }}</span>
+      <span class="name">{{ algorithm.name }}</span>
+    </div>
+
+    <section class="all_info">
+      <p class="description">
+        {{ algorithm.large_description }}
+      </p>
+      <br />
+      <p class="description">
+        {{ algorithm.concept }}
+      </p>
+
+      <br />
+      <p class="title_components" style="margin-bottom: 10px">
+        - Este algoritmo se compone de varios componentes clave:
+      </p>
+
+      @for (component of algorithm.components; track $index) {
+      <div class="component">
+        <p class="component_title">*</p>
+        <p class="component_description">{{ component }}</p>
+      </div>
+      }
+
+      <br />
+
+      <p class="title_components" style="margin-bottom: 10px">
+        - El proceso general de este algoritmo es iterativo y se puede describir
+        de la siguiente manera:
+      </p>
+      @for (step of algorithm.process; track $index) {
+      <div class="process">
+        <p class="process_title">*</p>
+        <p class="process_description">{{ step }}</p>
+      </div>
+      }
+    </section>
+  </article>
+</main>

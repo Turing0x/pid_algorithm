@@ -4,56 +4,24 @@ export const InfoAlgorithm: IAlgorithm[] = [
   {
     name: 'Tabu',
     clasification: 'Optimizaición y Búsqueda',
-    description: 'Optimiza la búsqueda de soluciones explorando vecindarios, evitando soluciones previas para evitar óptimos locales.',
-    complexity: 'O(n^2)'
-  },
-  {
-    name: 'Selection Sort',
-    clasification: 'Sorting',
-    description: 'The selection sort algorithm sorts an array by repeatedly finding the minimum element from unsorted part and putting it at the beginning.',
-    complexity: 'O(n^2)'
-  },
-  {
-    name: 'Insertion Sort',
-    clasification: 'Sorting',
-    description: 'Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.',
-    complexity: 'O(n^2)'
-  },
-  {
-    name: 'Merge Sort',
-    clasification: 'Sorting',
-    description: 'Merge Sort is a Divide and Conquer algorithm. It divides input array in two halves, calls itself for the two halves and then merges the two sorted halves.',
-    complexity: 'O(n log n)'
-  },
-  {
-    name: 'Quick Sort',
-    clasification: 'Sorting',
-    description: 'QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot.',
-    complexity: 'O(n log n)'
-  },
-  {
-    name: 'Heap Sort',
-    clasification: 'Sorting',
-    description: 'Heap sort is a comparison based sorting technique based on Binary Heap data structure.',
-    complexity: 'O(n log n)'
-  },
-  {
-    name: 'Counting Sort',
-    clasification: 'Sorting',
-    description: 'Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values.',
-    complexity: 'O(n + k)'
-  },
-  {
-    name: 'Radix Sort',
-    clasification: 'Sorting',
-    description: 'Radix sort is a non-comparative sorting algorithm. It avoids comparison by creating and distributing elements into buckets according to their radix.',
-    complexity: 'O(nk)'
-  },
-  {
-    name: 'Bucket Sort',
-    clasification: 'Sorting',
-    description: 'Bucket sort is mainly useful when input is uniformly distributed over a range.',
-    complexity: 'O(n^2)'
+    short_description: 'Optimiza la búsqueda de soluciones explorando vecindarios, evitando soluciones previas para evitar óptimos locales.',
+    large_description: 'El algoritmo de inteligencia artificial llamado "Tabú" es una técnica de búsqueda que se utiliza para la resolución de problemas combinatorios, especialmente en problemas de optimización. Fue desarrollado con el objetivo de mejorar los algoritmos de búsqueda local, superando algunas de sus limitaciones como la convergencia prematura o la convergencia a mínimos locales subóptimos. ',
+    concept: 'El concepto fundamental detrás del algoritmo Tabú es mantener un registro de las soluciones visitadas recientemente, conocidas como "movimientos tabú", y evitar volver a visitar estas soluciones durante un cierto período de tiempo o número de iteraciones. Esto permite al algoritmo explorar un espacio de búsqueda más amplio y evitar quedarse atascado en mínimos locales subóptimos.',
+    components: [
+      'Función Objetivo: Define el objetivo del problema de optimización que se está tratando de resolver. Esta función es la que se intenta maximizar o minimizar, dependiendo de la naturaleza del problema.',
+      'Solución Inicial: Se genera una solución inicial de forma aleatoria o utilizando alguna estrategia heurística. Esta solución inicial sirve como punto de partida para la búsqueda.',
+      'Movimientos: Se definen los posibles movimientos que se pueden aplicar a una solución para generar nuevas soluciones vecinas. Estos movimientos pueden incluir intercambios, permutaciones, o cualquier otra operación que modifique la solución actual de manera válida.',
+      'Criterio de Aspiración: En algunos casos, puede ser beneficioso considerar soluciones tabú si mejoran significativamente la función objetivo, incluso si están marcadas como tabú. El criterio de aspiración define las condiciones bajo las cuales se pueden considerar estas soluciones tabú.',
+      'Lista Tabú: Es el registro de las soluciones visitadas recientemente. Esta lista tabú contiene información sobre los movimientos que llevaron a estas soluciones y el tiempo restante que deben permanecer como tabú.',
+      'Condición de Parada: Define el criterio bajo el cual se termina la búsqueda, como alcanzar un cierto número de iteraciones o un tiempo de ejecución máximo.'
+    ],
+    process: [
+      'Se inicializa la solución inicial y la lista tabú.',
+      'Se generan soluciones vecinas aplicando movimientos a la solución actual.',
+      'Se evalúa cada solución vecina utilizando la función objetivo y se selecciona la mejor solución que no esté marcada como tabú.',
+      'Se actualiza la lista tabú, eliminando las soluciones que hayan estado marcadas durante un período de tiempo determinado y añadiendo las nuevas soluciones marcadas como tabú.',
+      'Se repite el proceso hasta que se cumpla la condición de parada.',
+    ],
   }
 ]
 
