@@ -11,6 +11,10 @@ let robot = "X"; //valores de cada uno de los jugadores
 let humano = "O";
 let actual_turno = humano;
 
+function reset() {
+  location.reload();
+}
+
 //cargar el juego
 function setup() {
   createCanvas(400, 400);
